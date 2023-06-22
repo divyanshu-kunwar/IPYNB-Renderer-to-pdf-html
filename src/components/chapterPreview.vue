@@ -4,7 +4,7 @@
 <template>
     <div id="EmpChapPrev">
         <div id="background">
-            <img src="../assets/" alt="logo" />
+            <img src="" alt="logo" />
         </div>
         <div id="text">
             <p>Chapter Name</p>

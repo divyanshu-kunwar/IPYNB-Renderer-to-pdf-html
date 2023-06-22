@@ -1,5 +1,6 @@
 <script setup>
 import { defineEmits } from 'vue';
+
 const emit = defineEmits(['upload'])
 
     function dosomething(event){
@@ -14,7 +15,8 @@ const emit = defineEmits(['upload'])
         input.onchange = e =>{
             if(e.target.files[0].name.split('.').pop() == 'ipynb'){
                 // upload file
-                let url = 'http://localhost:5000/upload';
+                // url in environment variable
+                let url = process.env.VUE_APP_BACKEND_URL + '/upload' || 'http://localhost:5000/upload';
                 let formData = new FormData();
                 formData.append('file', e.target.files[0]);
                 fetch(url, {
