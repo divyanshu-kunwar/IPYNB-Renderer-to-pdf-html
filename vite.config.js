@@ -11,19 +11,5 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
-  },
-  server: {
-    fs: {
-      // Allow serving files from the output directory
-      allow: ['..']
-    },
-    // Enable SPA fallback
-    proxy: {
-      // Proxy all requests to index.html
-      '/': {
-        target: '/index.html',
-        bypass: () => '/index.html'
-      }
-    }
   }
 })

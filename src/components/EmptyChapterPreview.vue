@@ -16,7 +16,7 @@ const emit = defineEmits(['upload'])
             if(e.target.files[0].name.split('.').pop() == 'ipynb'){
                 // upload file
                 // url in environment variable
-                let url = process.env.VUE_APP_BACKEND_URL + '/upload' || 'http://localhost:5000/upload';
+                let url =  'http://localhost:5000/upload';
                 let formData = new FormData();
                 formData.append('file', e.target.files[0]);
                 fetch(url, {

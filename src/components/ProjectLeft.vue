@@ -22,8 +22,9 @@ function upload(content){
             <!-- empty chapter preview emits an event named upload -->
             <!-- get the event and emit an event sending the content to parent view -->
             <EmptyChapterPreview @upload="upload"/>
-            <ChapterPreview />
-            <ChapterPreview />
+
+            <!-- <ChapterPreview /> will be inserted here -->
+            
         </div>
     </div>
 </template>
