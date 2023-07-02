@@ -9,7 +9,9 @@
     "host": "vite --host"
   },
   "dependencies": {
+    "dompurify": "^3.0.4",
     "marked": "^5.1.0",
+    "mathjax": "^3.2.2",
     "pinia": "^2.0.32",
     "vue": "^3.2.47",
     "vue-router": "^4.1.6"

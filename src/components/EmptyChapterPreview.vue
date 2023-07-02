@@ -1,27 +1,23 @@
 <script setup>
-import { defineEmits } from 'vue';
 import readFile from "../utility/fileOp"
 
-
-function dosomething(event) {
-
-    // open file dialog
+// function to open file dialog and read the file wiith the help of utility function
+function openFileDialog(event) {
     const input = document.createElement('input');
     input.type = 'file';
     input.accept = '.ipynb';
     input.multiple = false;
     input.click();
-
-    
     input.onchange = e => {
         readFile(e.target.files[0])
     }
 }
+
 </script>
 
 <template>
     <div id="EmpChapPrev">
-        <div id="background" @click="dosomething">
+        <div id="background" @click="openFileDialog">
             <img src="../assets/upload.svg" alt="  logo" />
         </div>
         <div id="text">
